@@ -224,6 +224,10 @@ h3 {
     /*justify-items: end;*/
 }
 
+.mobile-title {
+    display: none;
+}
+
 .end {
     justify-self: end;
 }
@@ -240,7 +244,7 @@ h3 {
 }
 
 .banner > img {
-    width: 360px;
+    width: 90%;
 }
 
 div .values {
@@ -266,9 +270,10 @@ div .values {
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 10% repeat(4, 1fr);
     max-width: clamp(200px, 70%, 1500px);
     justify-self: end;
+    gap: 15px;
 }
 
 .wrapper > p:not(:first-child), .wrapper > h3:not(:first-child) {
@@ -286,7 +291,7 @@ div .values {
 
 .all-projects {
     display: flex;
-    column-gap: 1%;
+    column-gap: 10px;
     margin-top: 32px;
     flex-wrap: wrap;
     row-gap: 20px;
@@ -296,6 +301,10 @@ div .values {
     overflow: hidden;
     position: relative;
     width: 430px;
+}
+
+.arrow {
+    cursor: pointer;
 }
 
 .card > img {
@@ -366,8 +375,8 @@ div .values {
 
 .order-form {
     display: grid;
-    width: clamp(200px, 70%, 1500px);
     justify-self: end;
+    width: clamp(200px, 70%, 1500px);
 }
 
 .order-form p {
@@ -414,4 +423,223 @@ div .values {
     gap: 10px;
     text-transform: uppercase;
 
+}
+
+.mobile-link {
+    display: none;
+}
+
+@media screen and (max-width: 854px) {
+    .container {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+        padding-bottom: 0;
+
+    }
+
+    .main-caption {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 24px;
+
+    }
+
+    .banner img {
+        display: none;
+    }
+
+    .main-caption a {
+        margin-top: 25px;
+    }
+
+    .banner > p {
+        max-width: none;
+        line-height: 23px;
+        margin-bottom: 24px;
+        font-size: 16px;
+    }
+
+    .mgn-btm120 {
+        margin-bottom: 45px;
+    }
+
+    .block {
+        display: block;
+    }
+
+    .max-width {
+        width: clamp(200px, 100%, 1500px);
+    }
+
+    #about-us {
+        display: none;
+    }
+
+    .mobile-title {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .values li {
+        margin-bottom: 14px;
+    }
+
+    .numbers p {
+        max-width: 40%;
+    }
+
+    .wrapper, .wrapper > p:first-child {
+        max-width: none;
+    }
+
+    .wrapper > h3:not(:first-child) {
+        border-bottom: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .card {
+        margin: 0 auto;
+    }
+
+    .feedback div {
+        margin-bottom: 16px;
+        padding: 30px 20px 80px 20px;
+    }
+
+    .make-order-img {
+        display: none;
+    }
+
+    .order-form {
+        width: auto;
+    }
+
+    .order-form p {
+        margin-top: 0;
+        margin-bottom: 20px
+    }
+
+    .form-item {
+        margin-bottom: 15px;
+    }
+
+    .btn-send, .btn-send:hover {
+        padding: 10px;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    .contacts {
+        margin-bottom: 25px;
+    }
+
+    .mobile-link {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .rights {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 855px) and (max-width: 1024px) {
+    h1 {
+        font-size: 52px;
+        line-height: 52px;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 36px;
+        padding-bottom: 0;
+    }
+
+    .banner > img {
+       display: none;
+    }
+
+    .max-width {
+        width: clamp(200px, 100%, 1500px);
+    }
+
+    .main-caption {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .wrapper {
+        max-width: clamp(200px, 100%, 1500px);
+    }
+
+    .feedback {
+        display: flex;
+        column-gap: 1%;
+        margin-top: 32px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .feedback div {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin: 0 auto;
+    }
+
+    .make-order-img {
+        display: none;
+    }
+
+    .block {
+        display: block;
+    }
+
+    .order-form {
+        gap: 20px;
+    }
+
+    .btn-send, .btn-send:hover {
+        padding: 10px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
 }
